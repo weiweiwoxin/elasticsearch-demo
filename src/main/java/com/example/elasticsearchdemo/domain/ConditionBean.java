@@ -47,6 +47,7 @@ public class ConditionBean {
     public enum BoolTypeEnum{
 
         TERM("term"),
+        TERMS("terms"),
         RANGE("range");
 
         private String value;

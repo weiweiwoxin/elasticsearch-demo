@@ -1,6 +1,9 @@
 package com.example.elasticsearchdemo.service;
 
+import com.example.elasticsearchdemo.domain.ConditionBean;
 import com.example.elasticsearchdemo.domain.MetaData;
+
+import java.util.List;
 
 /**
  * @Description: Elastic服务接口
@@ -39,4 +42,11 @@ public interface DemoService {
      * @return
      */
     String updateDoc(MetaData data);
+
+
+    String getDocByCondition(MetaData data, boolean isAllQuery, String keyword, String... fieldName);
+
+    String wildDocByCondition(MetaData data, String keyword, String fieldName);
+
+    String getDocByComplexCondition(MetaData data, List<ConditionBean> conditions);
 }

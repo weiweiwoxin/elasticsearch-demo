@@ -16,6 +16,7 @@
 
     <properties>
         <java.version>1.8</java.version>
+        <elasticsearch.version>6.4.3</elasticsearch.version>
     </properties>
 
     <dependencies>
@@ -23,22 +24,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-elasticsearch</artifactId>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
-        <!--<dependency>-->
-            <!--<groupId>elasticsearch-xpack-compact</groupId>-->
-            <!--<artifactId>elasticsearch-xpack-compact</artifactId>-->
-            <!--<version>6.4.0.0</version>-->
-        <!--</dependency>-->
-
-        <!--<dependency>-->
-            <!--<groupId>org.elasticsearch.client</groupId>-->
-            <!--<artifactId>x-pack-transport</artifactId>-->
-            <!--<version>6.4.3</version>-->
-        <!--</dependency>-->
 
         <dependency>
             <groupId>com.google.code.gson</groupId>
@@ -48,11 +38,13 @@
 
 
         <!-- add the x-pack jar as a dependency -->
+        <!-- cloud.elastic.co security support -->
         <dependency>
             <groupId>org.elasticsearch.client</groupId>
             <artifactId>x-pack-transport</artifactId>
-            <version>6.2.0</version>
+            <version>${elasticsearch.version}</version>
         </dependency>
+
 
         <dependency>
             <groupId>org.springframework.boot</groupId>

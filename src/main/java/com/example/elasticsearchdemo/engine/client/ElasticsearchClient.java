@@ -32,7 +32,7 @@ public class ElasticsearchClient {
             Settings.Builder settings = Settings.builder();
             settings.put("transport.tcp.compress", true);
             settings.put("client.transport.sniff", true);
-            settings.put("client.name", clusterName);
+            settings.put("cluster.name", clusterName);
 
             Set<String> servers = MainConfiguration.validServers;
             if (0 == servers.size()) {

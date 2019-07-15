@@ -35,6 +35,7 @@ public class MetaData {
         this.dataType = dataType;
         this.requestId = requestId;
         this.entity = entity;
+        preParserEntity();
     }
 
     public void preParserEntity(){
@@ -51,7 +52,7 @@ public class MetaData {
     }
 
     public String getIndexName() {
-        return indexName;
+        return indexName.toLowerCase();
     }
 
     public String getDataType() {
